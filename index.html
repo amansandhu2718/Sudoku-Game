@@ -41,6 +41,11 @@
   <link rel="icon" href="favicon.8de18.ico"/>
 </head>
 <body>
+  <div style="position: absolute;top: 0;left: 0;z-index: 99999;display: flex; justify-content: center; align-items: flex-start;width: 20vw;">
+    <button onclick="ExitGame()" style="background-color: #665dee; color: white; border: none; padding: 10px 10px; font-size: 2vw; border-radius: 5px; cursor: pointer; margin-top: 2vh;">
+      Exit Game
+    </button>
+  </div>
   <canvas id="GameCanvas" oncontextmenu="event.preventDefault()" tabindex="0"></canvas>
   <div id="splash">
     <div class="progress-bar stripes">
@@ -53,6 +58,10 @@
 <script src="main.8ea00.js" charset="utf-8"></script>
 
 <script type="text/javascript">
+   function ExitGame(){
+    history.back()
+    // window.location.replace("https://www.google.com")
+  }
 (function () {
     // open web debugger console
     if (typeof VConsole !== 'undefined') {
